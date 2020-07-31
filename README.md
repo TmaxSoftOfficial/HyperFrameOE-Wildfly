@@ -1,23 +1,23 @@
 # HyperFrameOE-Wildfly
 
-This is a group of WildFly Docker files with versions for HyperFrame Open Edition.
+This WildFly docker file is for HyperFrame Open Edition.
 
 ### Prerequisites
 
-Docker 19.03.12 (This is a workspace's version, other versions might be compatiable with this.)
+Docker 19.03.12 (Workspace version, recommended)
 
-### Set up Info
+### Requirements
 
-1) OS : Debian GNU/Linux 10 (Base OS of openjdk:8 in dockerhub)
-2) JDK : Openjdk 8 (build number 252) 
-3) WildFly : WildFly 19.0.0.Final
+1) OS: CentOS 7
+2) JDK: OpenJDK 8 (build number 252) 
+3) WildFly: WildFly 19.0.0 
 
-### Directory layout
+### Directory Structure
 
 ```bash
 {pwd}                                                                       
 |- release-image                                     #   
-|   |- Dockerfile                                        # Dockerfile for base wildfly image using openjdk:8 on dockerhub
+|   |- Dockerfile                                        # Dockerfile versions (v20.3, v20.4, etc.)
 |- usage                                             #   
 |   |- configuration                                     # 
 |   |   |- application-roles.properties                      # 
@@ -33,32 +33,26 @@ Docker 19.03.12 (This is a workspace's version, other versions might be compatia
 |   |   |- standalone-microprofile.xml                       # A configuration oriented toward microservices, providing our MicroProfile platform implementations combined with JAX-RS and technologies JAX-RS application’s commonly use to integrate with external services.
 |   |   |- standalone.xml                                    # Jakarta web profile certified configuration with the required technologies plus those noted in the table above.
 |   |- deployments                                       # 
-|   |   |- README.txt                                        # README of deployments
-|   |   |- sample.war                                        # 
+|   |   |- CHANGES.txt                                        # Document version history 
+|   |   |- [latest]Dockerfile                                        # 
 |- README.md
 ```
 
-### Installing
+### Installation Steps
 
-#### 1. Download the release-image, usage directory.
+#### 1. Download Dockerfile.
 
-#### 2. Build an 'Dockerfile' in release-image directory to make a base wildfly image.
+#### 2. To change the configuration/deployments, modify files under the configuration/deployments directory.
 
-```bash
-$ docker build -t <hyperframeoe-wildfly> .
-```
+#### 3. Place the Dockerfile file and the configuration and deployments directories in the same path.
 
-#### 3. If you want to modify server configuration or web application configuration, change files in usage/configuration/, usage/deployments directory.
-
-#### 4. Place 'Dockerfile' of usage directory, 'configuration', 'deployments' directory in the same path.
-
-#### 5. Build an 'Dockerfile' in usage directory to make a user setting image.
+#### 4. Build a Docker Image.
 
 ```bash
 $ docker build -t <create image_name>:<image_version> .
 ```
 
-#### 6. Generate a container using the image created in #5.
+#### 5. Generate a Container from the Image.
 
 ```bash
 $ docker run -d -p 8080:8080 <image_name>:<image_version>
@@ -72,4 +66,4 @@ $ docker run -d -p 8080:8080 -p 9990:9990 -it <image-name>:<image-version> /opt/
 
 ### License
 
-This project is licensed under the GNU Lesser General Public License Version 2.1
+Projects are licensed under the GNU Lesser General Public License Version 2.1 license.
