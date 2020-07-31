@@ -1,4 +1,4 @@
-# WildFly
+# HyperFrameOE-Wildfly
 
 This is a group of WildFly Docker files with versions for HyperFrame Open Edition.
 
