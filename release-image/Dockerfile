@@ -7,7 +7,7 @@ MAINTAINER MW 1-4 <seungwook_hwang@tmax.co.kr, hyolim_shin@tmax.co.kr>
 ENV WILDFLY_BINARY_FILE  wildfly-latest.tar.gz
 
 
-ENV WILDFLY_BINARY_URL  https://github.com/TmaxSoftOfficial/HyperFrameOE-wildfly/raw/master/release-image
+ENV WILDFLY_BINARY_URL  https://github.com/TmaxSoftOfficial/HyperFrameOE-Wildfly/raw/master/release-image
 #ENV WILDFLY_BINARY_URL  http://192.168.13.200/install/hyperframeOE/wildfly/ 
 
 ENV JBOSS_HOME      /opt/jboss/wildfly
