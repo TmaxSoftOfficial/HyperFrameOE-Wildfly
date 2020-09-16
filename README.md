@@ -8,7 +8,7 @@ Docker 19.03.12 (Workspace version, recommended)
 
 ### Requirements
 
-1) OS: CentOS 7
+1) OS: Debian GNU/Linux 10 (Base OS of openjdk:8 in dockerhub)
 2) JDK: OpenJDK 8 (build number 252) 
 3) WildFly: WildFly 19.0.0 
 
