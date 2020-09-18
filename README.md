@@ -16,10 +16,10 @@ Docker 19.03.12 (Workspace version, recommended)
 
 ```bash
 {pwd}                                                                       
-|- release-image                                     #   
-|   |- Dockerfile                                        # Dockerfile versions (v20.3, v20.4, etc.)
-|- usage                                             #   
-|   |- configuration                                     # 
+|- release-image                                             #   
+|   |- Dockerfile                                            # Dockerfile versions (v20.3, v20.4, etc.)
+|- usage                                                     #   
+|   |- configuration                                         # 
 |   |   |- application-roles.properties                      # 
 |   |   |- application-users.properties                      # 
 |   |   |- logging.properties                                # 
@@ -32,9 +32,9 @@ Docker 19.03.12 (Workspace version, recommended)
 |   |   |- standalone-microprofile-ha.xml                    # A configuration oriented toward microservices, similar to standalone-microprofile.xml but with support for high availability web sessions and distributed Hibernate second level caching.
 |   |   |- standalone-microprofile.xml                       # A configuration oriented toward microservices, providing our MicroProfile platform implementations combined with JAX-RS and technologies JAX-RS application’s commonly use to integrate with external services.
 |   |   |- standalone.xml                                    # Jakarta web profile certified configuration with the required technologies plus those noted in the table above.
-|   |- deployments                                       # 
-|   |   |- CHANGES.txt                                        # Document version history 
-|   |   |- [latest]Dockerfile                                        # 
+|   |- deployments                                           # 
+|   |   |- CHANGES.txt                                       # Document version history 
+|   |   |- [latest]Dockerfile                                # 
 |- README.md
 ```
 
