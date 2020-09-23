@@ -17,7 +17,7 @@ Docker 19.03.12 (Workspace version, recommended)
 ```bash
 {pwd}                                                                       
 |- release-image                                             # image folder  
-|   |- Dockerfile                                            # Dockerfile for base wildfly image using openjdk:8 on dockerhub
+|   |- Dockerfile(lastest)                                   # Dockerfile for base wildfly image using openjdk:8 on dockerhub
 |- usage                                                     # usage folder  
 |   |- configuration                                         # configuration folders
 |   |   |- application-roles.properties                     
