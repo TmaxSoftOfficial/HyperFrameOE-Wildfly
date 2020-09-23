@@ -16,26 +16,28 @@ Docker 19.03.12 (Workspace version, recommended)
 
 ```bash
 {pwd}                                                                       
-|- release-image                                             #   
+|- release-image                                             # image folder  
 |   |- Dockerfile                                            # Dockerfile versions (v20.3, v20.4, etc.)
-|- usage                                                     #   
-|   |- configuration                                         # 
-|   |   |- application-roles.properties                      # 
-|   |   |- application-users.properties                      # 
-|   |   |- logging.properties                                # 
-|   |   |- mgmt-groups.properties                            # 
-|   |   |- mgmt-users.properties                             # 
-|   |   |- standalone-full-ha.xml                            # Jakarta Full Platform certified configuration with high availability
-|   |   |- standalone-full.xml                               # Jakarta Full Platform certified configuration including all the required technologies
-|   |   |- standalone-ha.xml                                 # Jakarta web profile certified configuration with high availability
-|   |   |- standalone-load-balancer.xml                      # 
-|   |   |- standalone-microprofile-ha.xml                    # A configuration oriented toward microservices, similar to standalone-microprofile.xml but with support for high availability web sessions and distributed Hibernate second level caching.
-|   |   |- standalone-microprofile.xml                       # A configuration oriented toward microservices, providing our MicroProfile platform implementations combined with JAX-RS and technologies JAX-RS application’s commonly use to integrate with external services.
-|   |   |- standalone.xml                                    # Jakarta web profile certified configuration with the required technologies plus those noted in the table above.
-|   |- deployments                                           # 
-|   |   |- CHANGES.txt                                       # Document version history 
-|   |   |- [latest]Dockerfile                                # 
+|- usage                                                     # usage folder  
+|   |- configuration                                         # configuration folders
+|   |   |- application-roles.properties                     
+|   |   |- application-users.properties                      
+|   |   |- logging.properties                                
+|   |   |- mgmt-groups.properties                            
+|   |   |- mgmt-users.properties                             
+|   |   |- standalone-full-ha.xml
+|   |   |- standalone-full.xml
+|   |   |- standalone-load-balancer.xml                     
+|   |   |- standalone-microprofile-ha.xml
+|   |   |- standalone-microprofile.xml                      
+|   |   |- standalone.xml                                    
+|   |- deployments                                           # deployments folder
+|   |   |- README.txt
+|   |   |- sample.war
+|   |- Dockerfile
 |- README.md
+|- wildfly-latest-src.tar.gz
+|- wildfly-latest.tar.gz
 ```
 
 ### Installation Steps
