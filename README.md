@@ -93,7 +93,7 @@ $ docker run -d -p 8080:8080 -p 9990:9990 -it <image-name>:<image-version> /opt/
 
 ## License
 
-Projects are licensed under the GNU Lesser General Public License Version 2.1 license.
+The license file LICENSE.txt is included in the wildfly-latest-src.tar.gz 
 
 ## Version History
 
