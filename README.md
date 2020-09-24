@@ -2,15 +2,15 @@
 
 This WildFly docker file is for HyperFrame Open Edition.
 
-### Prerequisites
+## Prerequisites
 
 Docker 19.03.12 (Workspace version, recommended)
 
-### Requirements
+## Requirements
 
-1) OS: Debian GNU/Linux 10 (Base OS of openjdk:8 in dockerhub)
-2) JDK: OpenJDK 8 (build number 252) 
-3) WildFly: WildFly 19.0.0 
+#### 1) OS: Debian GNU/Linux 10 (Base OS of openjdk:8 in dockerhub)
+#### 2) JDK: OpenJDK 8 (build number 252) 
+#### 3) WildFly: WildFly 19.0.0 
 
 ### Directory Structure
 
@@ -40,40 +40,65 @@ Docker 19.03.12 (Workspace version, recommended)
 |- wildfly-latest.tar.gz
 ```
 
-### Installation Steps
+## Installation Steps:
 
-#### 1. Download Dockerfile.
+### You can choose one of the following two installation methods.
 
-#### 2. To change the configuration/deployments, modify files under the configuration/deployments directory.
+### Method 1. Using Dockerfile and binary downloaded from GitHub
 
-#### 3. Place the Dockerfile file and the configuration and deployments directories in the same path.
+#### 1. Go to the following site: https://github.com/TmaxSoftOfficial/HyperFrameOE-Wildfly.
 
-#### 4. Build a Docker Image.
+#### 2. Download the Dockerfile and binary.
 
+#### 3. To change the configuration, modify files under the conf directory.
+
+#### 4. Place the Dockerfile and start.sh files and the conf, license, and ssl directories in the same path.
+
+#### 5. Build a Docker Image.
 ```bash
 $ docker build -t <create image_name>:<image_version> .
 ```
 
-#### 5. Generate a Container from the Image.
-
-```bash
-$ docker run -d -p 8080:8080 <image_name>:<image_version>
-```
--> gerneral command
-
+#### 6. Generate a Container from the Image.
 ```bash
 $ docker run -d -p 8080:8080 -p 9990:9990 -it <image-name>:<image-version> /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
 ```
--> If you want to use management mode, use above command and access 9990 port.
 
-### License
+
+
+
+### Method 2. Using Image of Docker Hub
+
+#### 1. Search for the Image.
+- It can be searched from Docker Hub (https://hub.docker.com/repository/docker/tmaxsoftofficial/hyperframeoe-wildfly) or with the following docker search command.
+```bash 
+$ docker search hyperframeoe-apache
+```
+
+#### 2. Pull the Image.
+```bash
+$ docker pull tmaxsoftofficial/hyperframeoe-wildfly:latest
+```
+
+#### 3. Build a Docker Image.
+```bash
+$ docker build -t <create image_name>:<image_version> .
+```
+
+#### 4. Generate a Container from the Image.
+```bash
+$ docker run -d -p 8080:8080 -p 9990:9990 -it <image-name>:<image-version> /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
+```
+
+
+## License
 
 Projects are licensed under the GNU Lesser General Public License Version 2.1 license.
 
-### Version History
+## Version History
 
 [HyperFrame OE, WildFly 19.0.0.Final](https://github.com/TmaxSoftOfficial/HyperFrameOE-Wildfly/blob/master/release-image/Dockerfile "dockerfile link") (latest)
 
-### HyperFrameOE Service Level
+## HyperFrameOE Service Level
 
 [HyperFrameOE Service Level](https://github.com/TmaxSoftOfficial/HyperFrameOE-About/blob/master/ServiceLevel.md)
