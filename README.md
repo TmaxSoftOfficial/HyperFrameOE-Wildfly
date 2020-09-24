@@ -72,7 +72,7 @@ $ docker run -d -p 8080:8080 -p 9990:9990 -it <image-name>:<image-version> /opt/
 #### 1. Search for the Image.
 - It can be searched from Docker Hub (https://hub.docker.com/repository/docker/tmaxsoftofficial/hyperframeoe-wildfly) or with the following docker search command.
 ```bash 
-$ docker search hyperframeoe-apache
+$ docker search hyperframeoe-wildfly
 ```
 
 #### 2. Pull the Image.
