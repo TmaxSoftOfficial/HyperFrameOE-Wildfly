@@ -82,7 +82,7 @@ $ docker pull tmaxsoftofficial/hyperframeoe-wildfly:latest
 
 #### 3. Build a Docker Image.
 ```bash
-$ docker build -t <create image_name>:<image_version> .
+$ docker build -t tmaxsoftofficial/hyperframeoe-wildfly:latest .
 ```
 
 #### 4. Generate a Container from the Image.
