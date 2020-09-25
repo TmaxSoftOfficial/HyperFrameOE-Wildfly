@@ -87,7 +87,7 @@ $ docker build -t tmaxsoftofficial/hyperframeoe-wildfly:latest .
 
 #### 4. Generate a Container from the Image.
 ```bash
-$ docker run -d -p 8080:8080 -p 9990:9990 -it <image-name>:<image-version> /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
+$ docker run -d -p 8080:8080 -p 9990:9990 -it tmaxsoftofficial/hyperframeoe-wildfly:latest /opt/jboss/wildfly/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0
 ```
 
 
